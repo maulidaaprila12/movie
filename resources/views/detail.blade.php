@@ -1,4 +1,4 @@
-@extends('layout.template')
+@extends('layouts.template')
 
 @section('title', $movie['judul'])
 
@@ -13,7 +13,7 @@
         <div class="card-body">
           <h2 class="card-title">{{ $movie['judul'] }}</h2>
           <p class="card-text">{{ $movie['sinopsis'] }}</p>
-          <p class="card-text">Kategori : {{ $movie->category->nama_kategori }}</p>
+          <p class="card-text">Kategori : {{ $movie->category->nama_kategori ?? '-' }}</p>
           <p class="card-text">Tahun : {{ $movie['tahun'] }}</p>
           <p class="card-text">Pemain : {{ $movie['pemain'] }}</p>
           <a href="/" class="btn btn-success">Kembali</a>
